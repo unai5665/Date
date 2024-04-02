@@ -9,4 +9,5 @@
 - Formato de fecha corta
 - Sobrecarga de operadores
 
-### Test_date.py es una archivo que prueba la clase date ###
+### Test_date.py es una archivo que prueba la clase Date ###
+### prueba date.py es un archivos que prueba la clase Date ya que la de Test_date.py no parece funcionar ###
