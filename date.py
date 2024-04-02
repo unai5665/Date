@@ -39,13 +39,13 @@ class Date:
         '''Número de días transcurridos desde el 1-1-1900 hasta la fecha.'''
         days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-        # Calcula el número de días transcurridos en los años completos
+        
         delta_days = (self.year - 1900) * 365
         for y in range(1900, self.year):
             if self.is_leap_year(y):
                 delta_days += 1
 
-        # Ajusta el número de días para el año actual, considerando el mes y el día
+       
         for m in range(1, self.month):
             delta_days += days_in_month[m - 1]
             if m == 2 and self.is_leap_year(self.year):
