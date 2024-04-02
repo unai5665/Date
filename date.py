@@ -56,18 +56,8 @@ class Date:
 
     @property
     def weekday(self) -> int:
-        if self.month < 3:
-            year = self.year - 1
-            month = self.month + 12
-        else:
-            year = self.year
-            month = self.month
-
-        K = year % 100
-        J = year // 100
-
-        day_of_week = (self.day + ((13*(month + 1)) // 5) + K + (K // 4) + (J // 4) - 2 * J) % 7
-        return day_of_week
+        fecha = datetime(self.year, self.month, self.day)
+        return fecha.weekday()
 
     @property
     def is_weekend(self) -> bool:
