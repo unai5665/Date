@@ -53,8 +53,7 @@ class Date:
 
         return delta_days
 
-    #En el metodo weekday de datetime hubo un problema y es que en este se representa el lunes con el 0 y el domingo con el 6, y el el test nos piden que el domingo sea 0 y el jueves sea 4 en vez de 3 con los cual he modificado el metodo. 
-
+   
     @property
     def weekday(self) -> int:
         fecha = datetime(self.year, self.month, self.day)
@@ -70,15 +69,7 @@ class Date:
         return self.weekday == 6
 
     
-    @property
-    def short_date(self) -> str:
-        dia = self.day
-        mes = self.month
-        if self.day < 10:
-            dia = "0"+ str(self.day)
-        if self.month < 10:
-            mes = "0"+ str(self.month)
-        return f"{dia}/{mes}/{self.year}"
+   
 
 
     def __str__(self):
